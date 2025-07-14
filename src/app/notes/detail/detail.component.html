@@ -1,1 +1,9 @@
-<p>detail works!</p>
+<h2>Note Detaille</h2>
+
+<div *ngIf="note">
+  <h3>{{ note.title }}</h3>
+  <p>{{ note.content }}</p>
+
+  <button [routerLink]="['/notes', note.id, 'edit']">Edit</button>
+  <button routerLink="/notes">Back to list</button>
+</div>

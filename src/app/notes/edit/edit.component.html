@@ -1,1 +1,11 @@
-<p>edit works!</p>
+<h2>Edit Note</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>Title:</label>
+  <input formControlName="title" required />
+
+  <label>Content:</label>
+  <textarea formControlName="content"></textarea>
+
+  <button type="submit">Update</button>
+</form>

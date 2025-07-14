@@ -26,11 +26,11 @@ export class NoteService {
     return this.http.get<Note>(`${this.apiUrl}/${id}`, this.getAuthHeaders());
   }
 
-  create(data: { title: string, content: string}): Observable<Note>{
+  create(data: { title: string, content?: string}): Observable<Note>{
     return this.http.post<Note>(this.apiUrl, data, this.getAuthHeaders());
   }
 
-  update(id: string, data: {title: string, content: string}): Observable<Note>{
+  update(id: string, data: {title: string, content?: string}): Observable<Note>{
     return this.http.patch<Note>(`${this.apiUrl}/${id}`, data, this.getAuthHeaders());
   }
 

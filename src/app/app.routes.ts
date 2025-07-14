@@ -10,5 +10,5 @@ export const routes: Routes = [
     loadChildren: () => import('./notes/notes.routes').then((m) => m.NOTES_ROUTES),
   },
 
-  { path: '', redirectTo: 'notes', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
 ];

@@ -6,6 +6,7 @@
     <p>{{ note.content }}</p>
     <button [routerLink]="['/notes', note.id]">View</button>
     <button [routerLink]="['/notes', note.id, 'edit']">Edit</button>
+    <button [routerLink]="['/notes/create']">Créé une note</button>
     <button (click)="deleteNote(note.id)">Delete</button>
   </li>
 </ul>

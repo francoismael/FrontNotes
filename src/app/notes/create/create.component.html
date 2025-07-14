@@ -1,1 +1,10 @@
-<p>create works!</p>
+<h2>Créé une note</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>Titre</label>
+    <input formControlName="title" required/>
+    <label>Contenu</label>
+    <input formControlName="content">
+
+    <button type="submit">Enregistrer</button>
+</form>
