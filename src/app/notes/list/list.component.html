@@ -1,0 +1,11 @@
+<h1>Liste des Notes</h1>
+<button routerLink="/notes/create"></button>
+<ul>
+  <li *ngFor="let note of notes">
+    <h3>{{ note.title }}</h3>
+    <p>{{ note.content }}</p>
+    <button [routerLink]="['/notes', note.id]">View</button>
+    <button [routerLink]="['/notes', note.id, 'edit']">Edit</button>
+    <button (click)="deleteNote(note.id)">Delete</button>
+  </li>
+</ul>
