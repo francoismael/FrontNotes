@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NoteService } from '../note.service';
+import { NoteService } from '../../service/note.service';
 import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
-import { updateNote } from '../types/note.dto';
+import { updateNote } from '../../types/note.dto';
 
 @Component({
   selector: 'app-edit',

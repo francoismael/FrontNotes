@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { NoteService } from '../note.service';
+import { NoteService } from '../../service/note.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { CreateNote } from '../types/note.dto';
+import { CreateNote } from '../../types/note.dto';
 
 @Component({
   selector: 'app-create',

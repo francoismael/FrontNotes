@@ -1,7 +1,7 @@
-import { NoteSchema } from './../../../../../BackNotes/src/modules/notes/infrastructure/schema/note.schema';
+import { NoteSchema } from '../../../../../../BackNotes/src/modules/notes/infrastructure/schema/note.schema';
 import { Component } from '@angular/core';
-import { Note } from '../types/note.dto';
-import { NoteService } from '../note.service';
+import { Note } from '../../types/note.dto';
+import { NoteService } from '../../service/note.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { NoteService } from '../note.service';
-import { Note } from '../types/note.dto';
+import { NoteService } from '../../service/note.service';
+import { Note } from '../../types/note.dto';
 
 @Component({
   standalone: true,

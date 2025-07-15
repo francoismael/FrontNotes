@@ -1,4 +1,4 @@
-import { stringify } from './../../../node_modules/postcss/lib/postcss.d';
+import { stringify } from 'postcss/lib/postcss';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
