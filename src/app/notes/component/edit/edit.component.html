@@ -9,3 +9,4 @@
 
   <button type="submit">Update</button>
 </form>
+<app-popup *ngIf="showPopup" [message]="popupMessage" (close)="closePopup()"></app-popup>

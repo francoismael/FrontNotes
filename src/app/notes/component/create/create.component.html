@@ -8,3 +8,4 @@
 
     <button type="submit">Enregistrer</button>
 </form>
+<app-popup *ngIf="showPopup" [message]="popupMessage" (close)="closePopup()"></app-popup>

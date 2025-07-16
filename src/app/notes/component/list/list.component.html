@@ -10,3 +10,5 @@
     <button (click)="deleteNote(note.id)">Delete</button>
   </li>
 </ul>
+
+<app-popup *ngIf="showPopup" [message]="messagePopup" (close)="closePopup()"></app-popup>
