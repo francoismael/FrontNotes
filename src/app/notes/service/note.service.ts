@@ -18,6 +18,12 @@ export class NoteService {
     };
   }
 
+
+  searchNotes(term: string): Observable<Note[]> {
+    return this.http.get<Note[]>(`${this.apiUrl}/search?term=${term}`, this.getAuthHeaders());
+  }
+
+
   getAll(): Observable<Note[]>{
     return this.http.get<Note[]>(this.apiUrl, this.getAuthHeaders());
   }

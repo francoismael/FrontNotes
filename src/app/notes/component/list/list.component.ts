@@ -7,11 +7,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PopupComponent } from '../popup/popup.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { LucideAngularModule, FilePlus } from 'lucide-angular';
+import { SearchBarComponent } from "../search-bar/search-bar.component";
 
 
 @Component({
   selector: 'app-list',
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, PopupComponent, LucideAngularModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, PopupComponent, LucideAngularModule, SearchBarComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -24,12 +25,25 @@ export class ListComponent {
         this.loadNotes();
       }
 
+
+    searchNotes(term: string){
+      if(!term) return this.loadNotes();
+      this.noteService.searchNotes(term).subscribe((res: Note[]) =>{
+        this.notes = res;
+      }
+
+      )
+
+    }
+
+
       loadNotes() {
         this.noteService.getAll().subscribe({
           next: (res) => this.notes = res,
           error: (err) => console.error(err),
         });
       }
+
 
       deleteNote(id: string) {
         this.noteService.delete(id).subscribe({

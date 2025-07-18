@@ -1,5 +1,6 @@
 <div class="notes-container">
   <h1>Liste des Notes</h1>
+  <app-search-bar (search)="searchNotes($event)"></app-search-bar>
   <lucide-icon [img]="FilePlus"  class="btn-create-note" routerLink="/notes/create">Créer une note</lucide-icon>
 
   <ul class="notes-list">
