@@ -5,14 +5,18 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopupComponent } from '../popup/popup.component';
+import { SidebarComponent } from '../sidebar/sidebar.component';
+import { LucideAngularModule, FilePlus } from 'lucide-angular';
+
 
 @Component({
   selector: 'app-list',
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, PopupComponent],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, PopupComponent, LucideAngularModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
 export class ListComponent {
+   FilePlus = FilePlus
       notes: Note[] = [];
       messagePopup = '';
       showPopup = false;

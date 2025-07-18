@@ -1,0 +1,78 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Barre verticale */
+.nav-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  background-color: #1f2937;
+  padding-top: 90px;
+}
+
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nav-horizontal {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f2937;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9fafb;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.nav-item-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+
+
+.icon-horizontale{
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  float: right;
+}
+
+
+
+.nav-item:hover {
+  color: #38bdf8;
+  transition: color 0.2s ease-in-out;
+}

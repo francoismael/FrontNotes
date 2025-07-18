@@ -1,14 +1,22 @@
-<h1>Liste des Notes</h1>
-<button routerLink="/notes/create"></button>
-<ul>
-  <li *ngFor="let note of notes">
-    <h3>{{ note.title }}</h3>
-    <p>{{ note.content }}</p>
-    <button [routerLink]="['/notes', note.id]">View</button>
-    <button [routerLink]="['/notes', note.id, 'edit']">Edit</button>
-    <button [routerLink]="['/notes/create']">Créé une note</button>
-    <button (click)="deleteNote(note.id)">Delete</button>
-  </li>
-</ul>
+<div class="notes-container">
+  <h1>Liste des Notes</h1>
+  <lucide-icon [img]="FilePlus"  class="btn-create-note" routerLink="/notes/create">Créer une note</lucide-icon>
 
-<app-popup *ngIf="showPopup" [message]="messagePopup" (close)="closePopup()"></app-popup>
+  <ul class="notes-list">
+    <li *ngFor="let note of notes" class="note-card">
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.content }}</p>
+      <div class="note-actions">
+        <button class="btn-view" [routerLink]="['/notes', note.id]">View</button>
+        <button class="btn-edit" [routerLink]="['/notes', note.id, 'edit']">Edit</button>
+        <button class="btn-delete" (click)="deleteNote(note.id)">Delete</button>
+      </div>
+    </li>
+  </ul>
+
+  <app-popup
+    *ngIf="showPopup"
+    [message]="messagePopup"
+    (close)="closePopup()"
+  ></app-popup>
+</div>

@@ -1,0 +1,124 @@
+/* Affichage horizontal (de gauche à droite) */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Style pour chaque bloc de note */
+li {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 1 1 calc(33.333% - 1rem); /* 3 par ligne, adaptatif */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  li {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  li {
+    flex: 1 1 100%;
+  }
+}
+
+/* Titre de la note */
+li h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Contenu de la note */
+li p {
+  flex-grow: 1;
+  margin: 0 0 1rem;
+  color: #555;
+}
+
+
+/* Styles communs pour tous les boutons */
+li button {
+  border: none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+/* Supprime la marge du dernier bouton */
+li button:last-child {
+  margin-right: 0;
+}
+
+/* Bouton View - Bleu */
+.btn-view {
+  background-color: #666c73;
+}
+.btn-view:hover {
+  background-color: #0056b3;
+}
+
+/* Bouton Edit - Vert */
+.btn-edit {
+  background-color: #28a745;
+}
+.btn-edit:hover {
+  background-color: #1e7e34;
+}
+
+/* Bouton Delete - Rouge */
+.btn-delete {
+  background-color: #dc3545;
+}
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+
+
+
+
+
+
+
+
+
+.btn-create-note {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  float: center;
+  align-items: center;
+  float: center;
+  color: rgb(119, 212, 106);
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin-left: 872px;
+  font-size: 100px;
+}
+

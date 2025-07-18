@@ -1,0 +1,123 @@
+
+/* Global container */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Create button */
+button[routerLink="/notes/create"] {
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 10px 20px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button[routerLink="/notes/create"]:hover {
+  background-color: #2c3e90;
+}
+
+/* List container */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Each note card */
+li {
+  background-color: #f9f9f9;
+  border-left: 6px solid #3f51b5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+}
+
+/* Note title */
+li h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #222;
+  font-size: 1.4rem;
+}
+
+/* Note content */
+li p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Action buttons */
+li button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+li button:nth-child(3) { /* View */
+  background-color: #4caf50;
+  color: white;
+}
+
+li button:nth-child(3):hover {
+  background-color: #3e8e41;
+}
+
+li button:nth-child(4) { /* Edit */
+  background-color: #2196f3;
+  color: white;
+}
+
+li button:nth-child(4):hover {
+  background-color: #1976d2;
+}
+
+li button:nth-child(5) { /* Delete */
+  background-color: #f44336;
+  color: white;
+}
+
+li button:nth-child(5):hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  li {
+    padding: 1rem;
+  }
+
+  li h3 {
+    font-size: 1.2rem;
+  }
+
+  li p {
+    font-size: 0.95rem;
+  }
+
+  li button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}

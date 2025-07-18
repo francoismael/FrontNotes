@@ -1,0 +1,18 @@
+.logout-modal {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}

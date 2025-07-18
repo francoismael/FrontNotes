@@ -1,0 +1,31 @@
+<div class="layout">
+  <nav class="nav-vertical">
+    <div class="nav-item">
+      <lucide-icon [img]="HouseIcon" class="icon" routerLink="/notes"></lucide-icon>
+      <span>Accueil</span>
+    </div>
+    <div class="nav-item" routerLink="/notes/create">
+      <lucide-icon [img]="UserCheck" class="icon"></lucide-icon>
+      <span>Créer une note</span>
+    </div>
+    <div class="nav-item" routerLink="/notes">
+      <lucide-icon [img]="Menu" class="icon"></lucide-icon>
+      <span>Menu</span>
+    </div>
+  </nav>
+
+  <div class="main-section">
+    <nav class="nav-horizontal">
+      <div class="nav-item-2" (click)="toggleLogout()">
+        <lucide-icon [img]="UserCheck" class="icon-horizontale"></lucide-icon>
+        <span>Profil</span>
+      </div>
+      <app-logout *ngIf="showLogout" />
+
+    </nav>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
