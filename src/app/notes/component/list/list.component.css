@@ -105,8 +105,8 @@ li button:last-child {
 
 .btn-create-note {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 100px !important;
+  height: 100px !important;
   float: center;
   align-items: center;
   float: center;

@@ -30,7 +30,7 @@ export class LoginComponent {
         next: (res: any) => {
           console.log('Login successful', res);
           localStorage.setItem('token', res.access_token);
-          this.router.navigate(['/notes']); // Redirige après login
+          this.router.navigate(['/notes']);
         },
         error: (err) => {
           console.error(err);

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Note } from '../../types/note.dto';
 import { NoteService } from '../../service/note.service';
 import { CommonModule } from '@angular/common';
@@ -26,23 +26,28 @@ export class ListComponent {
       }
 
 
+
     searchNotes(term: string){
       if(!term) return this.loadNotes();
       this.noteService.searchNotes(term).subscribe((res: Note[]) =>{
         this.notes = res;
       }
 
+
       )
 
     }
 
 
-      loadNotes() {
-        this.noteService.getAll().subscribe({
-          next: (res) => this.notes = res,
-          error: (err) => console.error(err),
-        });
-      }
+    loadNotes() {
+      this.noteService.getAll().subscribe({
+        next: (res) => {
+          this.notes = res;
+        },
+        error: (err) => console.error(err),
+      });
+    }
+
 
 
       deleteNote(id: string) {

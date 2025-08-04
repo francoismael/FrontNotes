@@ -10,7 +10,7 @@ export const NOTES_ROUTES: Routes = [
   {
     path: '',
     component: SidebarComponent, // Le layout parent
-    canActivate: [AuthGuard], // Protéger tout le layout
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: ListComponent },
       { path: 'create', component: CreateComponent },
